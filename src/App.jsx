@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App">
       {/* Display Search component here */}
-      <Divider>Food List</Divider>
 
       <FoodList />
     </div>

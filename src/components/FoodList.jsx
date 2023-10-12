@@ -3,7 +3,7 @@ import FoodBox from "./FoodBox";
 import { useState } from "react";
 import AddFoodForm from "./AddFoodForm";
 import Search from "./Search";
-import {Row} from 'antd'
+import {Row, Divider} from 'antd'
 
 const FoodList = () => {
   const [foods, setFoods] = useState(foodsJson);
@@ -40,9 +40,11 @@ const FoodList = () => {
 
   return (
     <div>
+      <h1>LAB | React IronNutrition</h1>
       <Search setSearch={setSearch} />
 
       <AddFoodForm addFood={addFood} />
+      <Divider>Food List</Divider>
       <Row style={{ width: "100%", justifyContent: "center" }}>
         {filtered.map((food) => {
           return <FoodBox key={food.id} food={food} deleteFood={deleteFood} />;

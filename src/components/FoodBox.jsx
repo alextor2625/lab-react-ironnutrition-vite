@@ -1,6 +1,5 @@
 // Your code here
 import { Card, Col, Button } from "antd";
-import { useState } from "react";
 
 const FoodBox = ({ food, deleteFood }) => {
   return (

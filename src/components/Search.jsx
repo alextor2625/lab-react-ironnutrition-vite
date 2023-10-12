@@ -7,7 +7,7 @@ const Search = ({setSearch}) => {
 
   return (
     <div>
-      <Divider>Search</Divider>
+      <Divider> Search</Divider>
       <Input type="text" value={undefined} name="search" onChange={handleSearch} />
     </div>
   );
