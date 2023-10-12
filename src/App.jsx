@@ -6,12 +6,11 @@ import FoodList from "./components/FoodList";
 function App() {
   return (
     <div className="App">
+      {/* Display Search component here */}
       <Divider>Food List</Divider>
-      <Row style={{ width: "100%", justifyContent: "center" }}>
-        <FoodList />
-      </Row>
+
+      <FoodList />
     </div>
   );
 }
-
 export default App;

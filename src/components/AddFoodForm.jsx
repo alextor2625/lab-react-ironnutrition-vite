@@ -12,6 +12,7 @@ const AddFoodForm = ({ addFood }) => {
   });
 
   const handleSubmit = (e) => {
+    console.log("HERE");
     e.preventDefault();
     addFood(newFood);
     setNewFood({
@@ -23,17 +24,20 @@ const AddFoodForm = ({ addFood }) => {
   };
 
   const handleTextInput = (e) => {
-    setNewFood((prev) => ({...prev, [e.target.name]: e.target.value}))
+    setNewFood((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleNumberInput = (e) => {
-    setNewFood((prev) => ({...prev, [e.target.name]: Number(e.target.value)}))
+    setNewFood((prev) => ({
+      ...prev,
+      [e.target.name]: Number(e.target.value),
+    }));
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-        <Divider>Add Food Entry</Divider>
-        
+    <form onClick={handleSubmit}>
+      <Divider>Add Food Entry</Divider>
+
       <label htmlFor="name">Name:</label>
       <Input type="text" name="name" onChange={handleTextInput} />
 
@@ -45,8 +49,8 @@ const AddFoodForm = ({ addFood }) => {
 
       <label htmlFor="servings">Servings:</label>
       <Input type="number" name="servings" onChange={handleNumberInput} />
-      <Button type="submit">Create</Button>
 
+      <Button type="submit">Create</Button>
     </form>
   );
 };

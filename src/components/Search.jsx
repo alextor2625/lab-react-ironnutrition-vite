@@ -1,15 +1,14 @@
 import { Divider, Input, Button } from "antd";
 
-const Search = ({}) => {
-  const handleSearch = () => {
-    
+const Search = ({setSearch}) => {
+  const handleSearch = (e) => {
+    setSearch(e.target.value)
   };
 
   return (
     <div>
       <Divider>Search</Divider>
-      <label htmlFor="search"></label>
-      <Input type="text" name="search" />
+      <Input type="text" value={undefined} name="search" onChange={handleSearch} />
     </div>
   );
 };
